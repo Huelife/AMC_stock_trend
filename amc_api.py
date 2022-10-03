@@ -26,5 +26,5 @@ for url in [link]:
     print(f"Other error occurred: {err}")
   else:
     print("Success!")
-    json.dump(json_data, open("AMC_data.json", "w"))
-    file.close()
+    with open("AMC_data.json", "w") as outfile:
+      json.dump(json_data, outfile)
