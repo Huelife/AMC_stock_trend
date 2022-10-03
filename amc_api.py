@@ -11,10 +11,12 @@ import requests
 from requests.exceptions import HTTPError
 from requests import get
 
+#website and API key variables
 api_key = input("API Key: ")
 link = ("https://api.stockdata.org/v1/data/eod?"
         "symbols=AMC&api_token={}".format(api_key))
 
+#for loop for accessing API from website
 for url in [link]:
   try:
     response = requests.get(url)
@@ -26,5 +28,5 @@ for url in [link]:
     print(f"Other error occurred: {err}")
   else:
     print("Success!")
-    with open("AMC_data.json", "w") as outfile:
+    with open("AMC_data.json", "w") as outfile: #creating AMC data as a JSON file
       json.dump(json_data, outfile)
