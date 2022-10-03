@@ -1,7 +1,7 @@
 """
 amc_api.py: 
 Scraping AMC API from: https://www.stockdata.org/
-using Python
+using Python and creating JSON file from it
 """
 
 import webbrowser
