@@ -11,10 +11,7 @@ from requests.exceptions import HTTPError
 from requests import get
 
 api_key = input("API Key: ")
-url = (f"https://api.stockdata.org/v1/data/eod?"
-        "symbols=AMC&api_token={api_key}")
+link = ("https://api.stockdata.org/v1/data/eod?"
+        "symbols=AMC&api_token={}".format(api_key))
 
-r = requests.get(url)
-data = r.raw.read()
-
-print(data)
+response = requests.get(url)
