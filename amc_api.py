@@ -4,8 +4,6 @@ Scraping AMC API from: https://www.stockdata.org/
 using Python and creating JSON file from it
 """
 
-import webbrowser
-
 import json
 import requests
 from requests.exceptions import HTTPError
