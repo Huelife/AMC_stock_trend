@@ -1,6 +1,8 @@
 """
 amc_parser.py: 
-Parsing scraped AMC API data using Python
+Parsing scraped AMC API data using Python:
+creating a dataframe, sorting, editing, and
+creating an XLSX(Excel) file with the data
 """
 
 import json
