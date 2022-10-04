@@ -21,3 +21,12 @@ with open("AMC_data.json", "r") as infile:
 
   #changing column order to date > open > high > low > close > volume
   re_df = sort_df[["date","open","high","low","close","volume"]]
+
+  #creating pandas excel using xlsxwriter
+  writer = pd.ExcelWriter("AMC_data_sorted.xlsx", engine="xlsxwriter")
+
+  #converting dataframe to an xlsxwriter excel
+  re_df.to_excel(writer, sheet_name="AMC_Data")
+
+  #creating excel file
+  writer.save()
